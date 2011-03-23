@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <%= stylesheet_link_tag "blue" %>
+    <%= stylesheet_link_tag :all, :recursive => true %>
+    <%= javascript_include_tag :all, :recursive => true %>
+
+
+	<!-- Initialise jQuery Library -->
+	<script type="text/javascript" SRC="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+	<title>Items list page</title>
+</head>
+<body id="sp">
+<!--
+<div class="schemes">
+	<a HREF="@style=sky-blue" rel="sky-blue" title="Sky-Blue" class="sky-blue">Blue</a>
+	<a HREF="@style=raspberry" rel="raspberry" title="Raspberry" class="raspberry">Raspberry</a>
+	<a HREF="@style=dark-violet" rel="dark-violet" title="Dark-Violet" class="dark-violet">Dark-Violet</a>
+	<a HREF="@style=emerald" rel="emerald" title="Emerald" class="emerald">Emerald</a>
+	<a HREF="@style=pink" rel="pink" title="Pink" class="pink">Pink</a>
+	<a HREF="@style=golden" rel="golden" title="Golden" class="golden">Golden</a>
+	<a HREF="@style=lime" rel="lime" title="Lime" class="lime">Lime</a>
+	<a HREF="@style=metallic-blue" rel="metallic-blue" title="Metallic-Blue" class="metallic-blue">Metallic-Blue</a>
+	<a HREF="@style=light-brown" rel="light-brown" title="Light-Brown" class="light-brown">Light-Brown</a>
+	<a HREF="@style=orange" rel="orange" title="Orange" class="orange">Orange</a>
+	<a HREF="@style=blue" rel="blue" title="Blue" class="blue">Blue</a>
+	<a HREF="@style=ocean" rel="ocean" title="Ocean" class="ocean">Ocean</a>
+	<a HREF="@style=grapefruit" rel="grapefruit" title="Grapefruit" class="grapefruit">Grapefruit</a>
+	<a HREF="@style=olive" rel="olive" title="Olive" class="olive">Olive</a>
+	<a HREF="@style=violet" rel="violet" title="Violet" class="violet">Violet</a>
+</div>
+-->
+<!-- Begin Container -->
+<div class="container">
+	<!-- Begin Header -->
+	<div id="header">
+		<!-- Site Logo -->
+		<a HREF="index.html" class="logo">
+            <%= image_tag "logo.png" %>
+        </a>
+		<!-- SearchBox -->
+		<form action="" id="searchform">
+			<div>
+				<label for="s" class="screen-reader-text">Search for:</label>
+				<input type="text" id="s" name="s" value=""/>
+				<input type="submit" value="Search" id="searchsubmit"/>
+			</div>
+		</form>
+		<div class="clear"></div>
+	</div>
+	<!-- End Header -->
+	<!-- Start Main Nav -->
+	<div id="MainNav">
+		<a HREF="index.html" title="Home" class="home_btn">
+            <%= image_tag "icon_home.gif" %>
+		</a>
+		<div id="menu">
+			<ul class="ddsmoothmenu">
+				<li><a HREF="index.html" title="Sliders">Sliders</a>
+					<ul>
+						<li><a HREF="index.html" title="Nivo Slider">Nivo Slider</a></li>
+						<li><a HREF="index-2.html" title="Coin Slider">Coin Slider</a></li>
+						<li><a HREF="index-3.html" title="3D Round Carousel">3D Round Carousel</a></li>
+						<li><a HREF="index-4.html" title="Roundabout">Roundabout</a></li>
+						<li><a HREF="index-5.html" title="Anything slider">Anything slider</a></li>
+						<li><a HREF="index-6.html" title="s3 Slider">s3 Slider</a></li>
+						<li><a HREF="index-7.html" title="Orbit slider">Orbit slider</a></li>
+					</ul>
+				</li>
+				<li><a HREF="about.html" title="About">About</a>
+					<ul>
+						<li><a HREF="about.html" title="About Us">About Us</a></li>
+						<li><a HREF="sidebar_left.html" title="Sidebar Left">Sidebar Left</a></li>
+						<li><a HREF="styles.html" title="xHTML Styles">xHTML Styles</a></li>
+						<li><a href="#" title="Sample Menu Levels">Sample Menu Levels</a>
+							<ul>
+								<li><a href="#" title="Third Menu Level Item 1">3rd Menu Level Item 1</a></li>
+								<li><a href="#" title="Third Menu Level Item 2">3rd Menu Level Item 2</a></li>
+								<li><a href="#" title="Third Menu Level Item 3">3rd Menu Level Item 3</a>
+								<ul>
+									<li><a href="#" title="Fourth Menu Level Item 1">4th Menu Level Item 1</a></li>
+									<li><a href="#" title="Fourth Menu Level Item 2">4th Menu Level Item 2</a></li>
+								</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a HREF="fullwidth.html" title="Fullwidth &amp; Columns">Fullwidth &amp; Columns</a></li>
+						<li><a HREF="page.html" title="Ultra Clean Design">Ultra Clean Design</a></li>
+						<li><a HREF="404.html" title="404 error page">404 error page</a></li>
+					</ul>
+				</li>
+				<li class="current-menu-item"><a HREF="gallery.html" title="Gallery">Gallery</a></li>
+				<li><a HREF="portfolio2.html" title="Portfolio">Portfolio</a>
+					<ul>
+						<li><a HREF="portfolio2.html" title="Portfolio 1 Column">Portfolio 1 Column</a></li>
+						<li><a HREF="portfolio3.html" title="Portfolio 2 Column">Portfolio 2 Column</a></li>
+						<li><a HREF="portfolio4.html" title="Portfolio 3 Column">Portfolio 3 Column</a></li>
+					</ul>
+				</li>
+				<li><a HREF="blog.html" title="Blog">Blog</a>
+					<ul>
+						<li><a HREF="blog.html" title="Blog">Blog</a></li>
+						<li><a HREF="blog_single.html" title="Blog Single">Blog Single</a></li>
+					</ul>
+				</li>
+				<li><a HREF="contact.html" title="Contact">Contact</a></li>
+			</ul>
+		</div>
+		<!-- Start Social Icons -->
+		<ul class="social">
+			<li><a href="#" class="ico_facebook" title="Facebook"></a></li>
+			<li><a href="#" class="ico_twitter" title="Twitter"></a></li>
+			<li><a href="#" class="ico_myspace" title="MySpace"></a></li>
+			<li><a href="#" class="ico_rss" title="RSS Feed"></a></li>
+		</ul>
+		<!-- End Social Icons -->
+		<div class="clear"></div>
+	</div>
+    <!-- End Main Nav -->
+
+  <%= yield %>
+
+<!-- Start Footer Sidebar -->
+	<div id="f_sidebar">
+		<div class="sb_wrapper">
+			<br/>
+			<br/>
+			<br/>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- End Footer Sidebar -->
+	<!-- Start Footer  -->
+	<div id="footer">
+		<p class="copy">Copyright &copy; 2011 </p>
+		<div class="clear"></div>
+	</div>
+	<!-- End Footer  -->
+</div>
+<!-- End Container -->
+</body>
+</html>
